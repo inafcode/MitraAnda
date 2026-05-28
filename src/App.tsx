@@ -1,12 +1,15 @@
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+import KategoriLayanan from './components/KategoriLayanan';
+import ProdukPopuler from './components/ProdukPopuler';
 
 function App() {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      {/* Nanti komponen Hero dan Produk akan kita susun di bawah sini */}
+      <KategoriLayanan />
+      <ProdukPopuler />
     </div>
   );
 }

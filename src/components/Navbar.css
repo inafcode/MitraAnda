@@ -1,0 +1,51 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: white;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 700; /* Bold */
+  color: #1A365D; /* Warna biru gelap khas instansi */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #6B7280;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background-color: #EBF1F9;
+  color: #1A365D;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-masuk {
+  padding: 8px 20px;
+  border: 1px solid #E5E7EB;
+  background-color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}

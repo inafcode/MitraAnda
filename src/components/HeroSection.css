@@ -1,0 +1,83 @@
+.hero-container {
+  background-color: #1A365D; /* Warna biru gelap dari desainmu */
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-highlight {
+  color: #F59E0B; /* Warna kuning/oranye */
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #E5E7EB; /* Putih agak keabu-abuan agar tidak menyilaukan */
+  max-width: 600px;
+  margin: 0 auto 30px auto; /* Membuat paragrafnya ke tengah */
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #F59E0B;
+  color: #1A365D;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT (Maksimal lebar 768px) 
+   ========================================= */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 50px 20px; /* Jarak atas-bawah dikurangi */
+  }
+
+  .hero-title {
+    font-size: 28px; /* Judul yang tadinya 42px kita kecilkan */
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  /* Tombol yang tadinya berdampingan, kita ubah jadi atas-bawah */
+  .hero-buttons {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%; /* Membuat tombol selebar layar */
+    justify-content: center; /* Teks tombol ke tengah */
+  }
+}

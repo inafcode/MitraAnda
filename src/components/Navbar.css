@@ -49,3 +49,26 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+/* =========================================
+   RESPONSIVE LAYOUT (Maksimal lebar 768px) 
+   ========================================= */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 15px 20px; /* Padding kiri-kanan dikecilkan */
+  }
+
+  .navbar-logo {
+    font-size: 16px; /* Ukuran logo sedikit dikecilkan */
+  }
+
+  /* Sembunyikan menu teks di tengah agar tidak bertabrakan */
+  .navbar-menu {
+    display: none; 
+  }
+
+  .btn-masuk {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}

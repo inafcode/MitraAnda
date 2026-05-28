@@ -1,0 +1,143 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Mengambil sisa tinggi layar agar posisinya pas di tengah */
+  min-height: calc(100vh - 150px); 
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.login-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kolom sejajar */
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Bagian Kiri (Sisi Visual Brand) */
+.login-left {
+  background-color: #1A365D;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-left h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.login-left p {
+  color: #E5E7EB;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Bagian Kanan (Formulir) */
+.login-right {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-header {
+  margin-bottom: 30px;
+}
+
+.login-header h3 {
+  font-size: 24px;
+  color: #1A365D;
+}
+
+/* Tombol Switcher (Tab Umum vs Instansi) */
+.login-tabs {
+  display: flex;
+  background-color: #F3F4F6;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #6B7280;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background-color: white;
+  color: #1A365D;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Elemen Formulir */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4B5563;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #1A365D;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #F59E0B;
+  color: #1A365D;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #D97706;
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 768px) {
+  .login-card {
+    grid-template-columns: 1fr; /* Tumpuk ke bawah */
+  }
+  .login-left {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .login-right {
+    padding: 30px 20px;
+  }
+}

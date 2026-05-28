@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import './ProdukPopuler.css';
 
 // 1. Data Simulasi dari "Server"
@@ -60,7 +61,7 @@ function ProdukPopuler() {
             <h2>Produk Populer</h2>
             <p>Produk paling sering dipesan</p>
           </div>
-          <button className="btn-semua">Semua ➔</button>
+          <Link to="/produk" className="btn-semua">Semua ➔</Link>
         </div>
 
         {/* Tampilan Loading vs Tampilan Data */}

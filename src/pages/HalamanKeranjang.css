@@ -1,0 +1,188 @@
+.halaman-keranjang {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.keranjang-title {
+  font-size: 32px;
+  color: #1A365D;
+  margin-bottom: 30px;
+}
+
+/* Layout 2 Kolom: Kiri (Daftar) lebih lebar, Kanan (Ringkasan) lebih kecil */
+.keranjang-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* ==================================
+   AREA KIRI: DAFTAR BARANG
+   ================================== */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  gap: 20px;
+}
+
+.cart-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #EBF1F9;
+}
+
+.cart-info {
+  flex: 1; /* Mengambil sisa ruang tengah */
+}
+
+.cart-info-nama {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A365D;
+  margin-bottom: 4px;
+}
+
+.cart-info-kategori {
+  font-size: 12px;
+  color: #6B7280;
+  margin-bottom: 8px;
+}
+
+.cart-info-harga {
+  font-weight: 700;
+  color: #1A365D;
+}
+
+/* Area Tombol Plus, Minus, dan Hapus */
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-qty {
+  background-color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #1A365D;
+}
+
+.btn-qty:hover {
+  background-color: #F3F4F6;
+}
+
+.qty-angka {
+  width: 40px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-hapus {
+  background-color: transparent;
+  border: none;
+  color: #EF4444; /* Merah untuk tanda bahaya/hapus */
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn-hapus:hover {
+  color: #B91C1C;
+}
+
+/* ==================================
+   AREA KANAN: RINGKASAN
+   ================================== */
+.summary-box {
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.summary-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #E5E7EB;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1A365D;
+}
+
+.btn-checkout {
+  width: 100%;
+  background-color: #1A365D;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.btn-checkout:hover {
+  background-color: #122847;
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 768px) {
+  .keranjang-layout {
+    grid-template-columns: 1fr; /* Tumpuk Ringkasan ke bawah */
+  }
+  
+  .cart-card {
+    flex-direction: column; /* Gambar, teks, dan tombol jadi atas-bawah */
+    align-items: flex-start;
+  }
+  
+  .cart-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}

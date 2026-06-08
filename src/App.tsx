@@ -9,6 +9,9 @@ import HalamanKeranjang from './pages/HalamanKeranjang';
 import HalamanKategori from './pages/HalamanKategori';
 import HalamanLogin from './pages/HalamanLogin';
 
+import DashboardAdmin from './pages/DashboardAdmin';
+import ProtectedRoute from './components/ProtectedRoute';
+
 function App() {
   return (
     <CartProvider>
@@ -22,6 +25,13 @@ function App() {
               <Route path="/keranjang" element={<HalamanKeranjang />} />
               <Route path="/kategori" element={<HalamanKategori />} />
               <Route path="/login" element={<HalamanLogin />} />
+
+              <Route path="/admin" element={
+                  <ProtectedRoute>
+                    <DashboardAdmin />
+                  </ProtectedRoute>
+                } 
+              />
             </Routes>
           </div>
           <Footer />

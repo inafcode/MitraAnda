@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './HeroSection.css';
 
 function HeroSection() {
@@ -13,9 +14,9 @@ function HeroSection() {
         bulanan untuk instansi.
       </p>
       
-      <div className="hero-buttons">
-        <button className="btn-primary">Lihat Produk ➔</button>
-        <button className="btn-outline">Daftar Instansi</button>
+      <div className="hero-button">
+        <NavLink to="/produk" className="btn-primary">Produk</NavLink>
+        <NavLink to="/daftar-instansi" className="btn-outline">Daftar Instansi</NavLink>
       </div>
     </div>
   );

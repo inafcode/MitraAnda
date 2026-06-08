@@ -1,0 +1,160 @@
+.admin-container {
+  display: flex;
+  min-height: 80vh; /* Mengambil sisa layar di bawah Navbar */
+  background-color: #F8FAFC;
+}
+
+/* ==================================
+   SIDEBAR (MENU KIRI)
+   ================================== */
+.admin-sidebar {
+  width: 250px;
+  background-color: #1A365D;
+  color: white;
+  padding: 30px 20px;
+}
+
+.admin-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.admin-menu {
+  list-style: none;
+}
+
+.admin-menu li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.admin-menu li.active {
+  background-color: #F59E0B;
+  color: #1A365D;
+}
+
+.admin-menu li:hover:not(.active) {
+  background-color: #2D4A77;
+}
+
+/* ==================================
+   KONTEN UTAMA (KANAN)
+   ================================== */
+.admin-content {
+  flex: 1;
+  padding: 40px;
+  overflow-x: auto; /* Agar tabel bisa digeser jika layar kekecilan */
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h2 {
+  font-size: 28px;
+  color: #0F172A;
+}
+
+.btn-tambah {
+  background-color: #10B981; /* Hijau Sukses */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-tambah:hover {
+  background-color: #059669;
+}
+
+/* ==================================
+   TABEL DATA
+   ================================== */
+.admin-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.admin-table th {
+  background-color: #F8FAFC;
+  color: #475569;
+  font-size: 14px;
+}
+
+.admin-table td {
+  color: #1E293B;
+  font-size: 14px;
+}
+
+.badge-stok {
+  background-color: #DEF7EC;
+  color: #03543F;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit {
+  background-color: #F59E0B;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-hapus {
+  background-color: #EF4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* RESPONSIVE SMARTPHONE */
+@media (max-width: 768px) {
+  .admin-container {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+  .admin-content {
+    padding: 20px;
+  }
+}

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -15,9 +16,10 @@ function Footer() {
         <div className="footer-links">
           <h4>Navigasi</h4>
           <ul>
-            <li><a href="#produk">Produk</a></li>
-            <li><a href="#kategori">Kategori</a></li>
-            <li><a href="#masuk">Masuk / Daftar</a></li>
+            <li><NavLink to="/">Beranda</NavLink></li>
+            <li><NavLink to="/produk">Produk</NavLink></li>
+            <li><NavLink to="/kategori">Kategori</NavLink></li>
+            <li><NavLink to="/login">Masuk / Daftar</NavLink></li>
           </ul>
         </div>
 
